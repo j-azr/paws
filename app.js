@@ -4,7 +4,7 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const app = express();
-const port = 5391;
+const port = process.env ||5391;
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
