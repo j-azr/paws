@@ -1,0 +1,17 @@
+<header>     
+    <a href="/home">
+        <img src="/images/cute.jpeg" alt="Picture of Pets!"> 
+    </a>
+    <h1>Paws & Claws Adoption Center</h1>
+    <h3>Current Day and Time:</h3>
+    <span id="datetime"></span>
+</header>
+<script>
+    function updateTime() {
+        document.getElementById('datetime').innerHTML = new Date().toLocaleString();
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
+
+

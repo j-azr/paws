@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <div class="column side">
+            <nav>
+                <ul>
+                    <li class="nav-item"><a href="/home">Home page</a></li>
+                    <li class="nav-item"><a href="/find">Find a cat/dog</a></li>
+                    <li class="nav-item"><a href="/dogcare">Dog Care</a></li>
+                    <li class="nav-item"><a href="/catcare">Cat Care</a></li>
+                    <li class="nav-item"><a href="/register">Create an Account</a></li>
+                    <li class="nav-item"><a href="/donate">Have a pet to give away</a></li>
+                    <li class="nav-item"><a href="/contact">Contact Us</a></li>
+                    <li class="nav-item"><a href="/logout">LogOut</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="column middle">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <input type="hidden" name="redirect" value="<%= redirect %>">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </main>
+    </div>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

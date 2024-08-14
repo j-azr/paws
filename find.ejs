@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Pet</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/all.js" defer></script>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+      <div class="column side">
+        <nav>
+          <ul>
+            <li class="nav-item"><a href="/home">Home page</a></li>
+            <li class="nav-item"><a href="/find">Find a cat/dog</a></li>
+            <li class="nav-item"><a href="/dogcare">Dog Care</a></li>
+            <li class="nav-item"><a href="/catcare">Cat Care</a></li>
+            <li class="nav-item"><a href="/register">Create an Account</a></li>
+            <li class="nav-item"><a href="/donate">Have a pet to give away</a></li>
+            <li class="nav-item"><a href="/contact">Contact Us</a></li>
+            <li class="nav-item"><a href="/logout">LogOut</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="column middle">
+        <h2>Find a pet!</h2>
+        <form id="findPetForm" action="/find-pet" method="post">
+            <label for="petType">Select Cat or Dog:</label>
+            <select name="petType" id="petType">
+                <option value="">Select</option>
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+            </select>
+            <br><br>
+            <label for="breed">Pet Breed:</label>
+            <input type="text" id="breed" name="breed">
+            <br><br>
+            <label for="age">Select Age:</label>
+            <select name="age" id="age">
+                <option value="">Select</option>
+                <option value="Kitten">Kitten</option>
+                <option value="Puppy">Puppy</option>
+                <option value="Adult Cat">Adult Cat</option>
+                <option value="Adult Dog">Adult Dog</option>
+                <option value="Senior">Senior</option>
+            </select>
+            <br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <input type="radio" id="doesnt-matter" name="gender" value=""> Doesn't Matter
+            <br><br>
+            <label for="compatibility">Compatibility:</label>
+            <input type="checkbox" name="compatibility" value="Gets along with Dogs"> Gets along with Dogs
+            <input type="checkbox" name="compatibility" value="Gets along with Cats"> Gets along with Cats
+            <input type="checkbox" name="compatibility" value="Gets along with Children"> Gets along with Children
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </form>
+    </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

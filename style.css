@@ -1,0 +1,99 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
+header {
+  background-color: lightgreen;
+  padding: 25px;
+  text-align: center;
+}
+
+h1 {
+  color: grey;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column.side {
+  width: 25%;
+  background-color: beige;
+  padding: 10px;
+}
+
+.column.side nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.column.middle {
+  flex: 3;
+  background-color: white;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.center {
+  display: flex;
+  flex: 1;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nav-item {
+  padding: 15px;
+  margin: 10px;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: grey;
+  color: white;
+}
+
+footer {
+  display: flex;
+  background-color: lightgreen;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}

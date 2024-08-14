@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/style.css">
+</head>
+<body>
+
+
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <div class="column side">
+            <nav>
+                <ul>
+                    <li class="nav-item"><a href="/home">Home page</a></li>
+                    <li class="nav-item"><a href="/find">Find a cat/dog</a></li>
+                    <li class="nav-item"><a href="/dogcare">Dog Care</a></li>
+                    <li class="nav-item"><a href="/catcare">Cat Care</a></li>
+                    <li class="nav-item"><a href="/register">Create an Account</a></li>
+                    <li class="nav-item"><a href="/donate">Have a pet to give away</a></li>
+                    <li class="nav-item"><a href="/contact">Contact Us</a></li>
+                    <li class="nav-item"><a href="/logout">LogOut</a></li>
+                </ul>
+            </nav>
+        </div>
+
+             
+        <main class = "column middle" > 
+
+            <p> Privacy/Disclaimer Statement <br>
+
+            <br><i>Privacy Policy</i> <br>
+
+            At Paws & Claws Adoption Center, your privacy is our priority. We promise never to sell, share, or misuse your personal information. Any data collected is used solely to facilitate pet adoption, provide veterinary services, and enhance your experience on our website. Your information is protected with robust security measures. <br>
+            <br>
+            <i>Disclaimer</i>
+            <br>
+            While we strive for accuracy, Paws & Claws is not responsible for any incorrect information provided by pet owners or third parties. We cannot guarantee the complete accuracy of pet health and temperament details. Users are responsible for the accuracy of the information they submit.<br> <br>
+
+            For any questions or concerns, please visit our Contact Us page.
+            <br>
+            Thank you for trusting Paws & Claws Adoption Center.
+            </p>    
+        </main>
+    </div>
+
+
+    <%- include('partials/footer') %>
+
+    <script src = "all.js"></script>  
+
+</body>
+</html>
