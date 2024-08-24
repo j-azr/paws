@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Pets</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <main>
+        <h2>Available Pets</h2>
+        <ul>
+            <% pets.forEach(pet => { %>
+                <li>
+                    <h3>Pet ID: <%= pet.id %></h3>
+                    <p>Type: <%= pet.type %></p>
+                    <p>Breed: <%= pet.breed %></p>
+                    <p>Age: <%= pet.age %></p>
+                    <p>Gender: <%= pet.gender %></p>
+                    <p>Compatibility: <%= pet.compatibility.join(', ') %></p>
+                    <p>Comments: <%= pet.comments %></p>
+                    <p>Email: <%= pet.email %></p>
+                    <p>Owner: <%= pet.owner %></p>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+    
+    
+    
+</body>
+</html>

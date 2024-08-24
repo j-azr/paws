@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate a Pet</title>
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/style.css">
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+  <div class = "container">
+
+    <div class="column side">
+      <nav>
+          <ul>
+              <li class="nav-item"><a href="/home">Home page</a></li>
+              <li class="nav-item"><a href="/find">Find a cat/dog</a></li>
+              <li class="nav-item"><a href="/dogcare">Dog Care</a></li>
+              <li class="nav-item"><a href="/catcare">Cat Care</a></li>
+              <li class="nav-item"><a href="/register">Create an Account</a></li>
+              <li class="nav-item"><a href="/donate">Have a pet to give away</a></li>
+              <li class="nav-item"><a href="/contact">Contact Us</a></li>
+              <li class="nav-item"><a href="/logout">LogOut</a></li>
+          </ul>
+      </nav>
+    </div>
+
+    <main class="column middle">
+      <h2>Have a Pet to Give Away</h2>
+      <form id="donatePetForm" method="POST" action="/register-pet">
+        <label for="petType">Select Cat or Dog:</label>
+        <select name="petType" id="petType" required>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+        </select><br><br>
+    
+        <label for="breed">Pet Breed:</label>
+        <input type="text" name="breed" id="breed" placeholder="Enter Breed" required><br><br>
+    
+        <label for="age">Select Age:</label>
+        <select name="age" id="age" required>
+            <option value="Kitten">Kitten</option>
+            <option value="Puppy">Puppy</option>
+            <option value="Adult Cat">Adult Cat</option>
+            <option value="Adult Dog">Adult Dog</option>
+            <option value="Senior Cat">Senior Cat</option>
+            <option value="Senior Dog">Senior Dog</option>
+        </select><br><br>
+    
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>Male
+        <input type="radio" id="female" name="gender" value="Female" required>Female
+        <input type="radio" id="doesnt-matter" name="gender" value="Doesn't Matter" required>Doesn't Matter<br><br>
+    
+        <label for="compatibility">Compatibility:</label>
+        <input type="checkbox" name="comp[]" value="Gets along with Dogs">Gets along with Dogs
+        <input type="checkbox" name="comp[]" value="Gets along with Cats">Gets along with Cats
+        <input type="checkbox" name="comp[]" value="Gets along with Children">Gets along with Children
+        <input type="checkbox" name="comp[]" value="Doesn't Matter">Doesn't Matter<br><br>
+    
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments" placeholder="Share more comments about your pet here!"></textarea><br><br>
+    
+        <label for="ownerName">Owner's Name:</label>
+        <input type="text" name="ownerName" id="ownerName" placeholder="Enter name" required><br><br>
+    
+        <label for="ownerEmail">Owner's Email:</label>
+        <input type="email" name="ownerEmail" id="ownerEmail" placeholder="Enter email" required><br><br>
+    
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    
+    </form>
+    
+    <script src="/javascripts/all.js"></script>
+    
+
+</body>
+</html>
